@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { BrowserRouter } from 'react-router-dom'
+import HeaderReducer from './reducer/Header.Reducer'
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+    <HeaderReducer>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </HeaderReducer>
 	</React.StrictMode>,
 	document.getElementById('root')
 )
